@@ -18,6 +18,8 @@ public class Test {
         Consumer consumer = (Consumer)factory.getBean("consumerBean");
         Question question = (Question)factory.getBean("questionBean");
         Chat chat = (Chat)factory.getBean("chatBean");
+        MapQuestion mapQuestion = (MapQuestion)factory.getBean("MapBean");
+        mapQuestion.displayInfo();
         chat.displayInfo();
         student.displayInfo();
         consumer.show();
