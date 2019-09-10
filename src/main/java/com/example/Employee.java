@@ -3,7 +3,7 @@ package com.example;
 public class Employee {
 
     //Dependency Injection
-    Address address;
+    Address address; //aggregation.
 
     Employee(Address address) {
         this.address = address;

@@ -3,14 +3,27 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <bean id="addressBean" class="com.example.Address">
+        <constructor-arg value="Lagos"></constructor-arg>
+        <constructor-arg value="Lagos"></constructor-arg>
+        <constructor-arg value="Nigeria"></constructor-arg>
+    </bean>
+
 <!--    Bean element is used to define the bean for the given class-->
     <bean id="studentbean" class="com.example.Student">
         <property name="name" value="Nnamdi Nwabuokei"></property>
     </bean>
     <bean id="consumerBean" class="com.example.Consumer">
 <!--        If you don't specify the type attribute, default string-based constructor will be invoked  -->
-<!--    <constructor-arg value="10" type="int"></constructor-arg>-->
-        <constructor-arg value="10" type="int"></constructor-arg>
+    <constructor-arg value="10" type="int"></constructor-arg>
+<!--        <constructor-arg value="10" type="int"></constructor-arg>-->
         <constructor-arg value="Sonooo"></constructor-arg>
+
+        <constructor-arg>
+<!--            It is used to define the reference of another object-->
+            <ref bean="addressBean"></ref>
+        </constructor-arg>
     </bean>
+
 </beans>
