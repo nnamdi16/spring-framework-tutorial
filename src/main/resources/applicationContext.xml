@@ -69,4 +69,36 @@
         </map>
     </constructor-arg>
 </bean>
+
+    <bean id="answer1" class="com.example.nonString.Response">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Java is a Programming Language"></constructor-arg>
+        <constructor-arg value="12/12/2001"></constructor-arg>
+    </bean>
+    <bean id="answer2" class="com.example.nonString.Response">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is an all round platform"></constructor-arg>
+        <constructor-arg value="12/12/2003"></constructor-arg>
+    </bean>
+
+    <bean id="user1" class="com.example.nonString.User">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Arun Kumar"></constructor-arg>
+        <constructor-arg value="arun@gmail.com"></constructor-arg>
+    </bean>
+    <bean id="user2" class="com.example.nonString.User">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Varun Kumar"></constructor-arg>
+        <constructor-arg value="varun@gmail.com"></constructor-arg>
+    </bean>
+    <bean id="mapObject" class="com.example.nonString.MapObject">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="What is Java ?"></constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key-ref="answer1" value-ref="user1"></entry>
+                <entry key-ref="answer2" value-ref="user2"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
 </beans>
