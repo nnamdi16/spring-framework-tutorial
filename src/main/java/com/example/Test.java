@@ -16,8 +16,11 @@ public class Test {
         //getBean method returns the object of the associated class
         Student student = (Student)factory.getBean("studentbean");
         Consumer consumer = (Consumer)factory.getBean("consumerBean");
-
+        Question question = (Question)factory.getBean("questionBean");
+        Chat chat = (Chat)factory.getBean("chatBean");
+        chat.displayInfo();
         student.displayInfo();
         consumer.show();
+        question.displayInfo();
     }
 }

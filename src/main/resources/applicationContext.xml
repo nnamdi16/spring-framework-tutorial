@@ -26,4 +26,37 @@
         </constructor-arg>
     </bean>
 
+    <bean id="questionBean" class="com.example.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is Java?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Java is a programming language</value>
+                <value>Java is a platform</value>
+                <value>Java is an island of Indonesia</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="ans1" class="com.example.Answer" >
+      <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="Java is a programming language"></constructor-arg>
+        <constructor-arg value="John"></constructor-arg>
+    </bean>
+    <bean id="ans2" class="com.example.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Java is a platform"></constructor-arg>
+        <constructor-arg value="Ravi"></constructor-arg>
+    </bean>
+    <bean id="chatBean" class="com.example.Chat">
+        <constructor-arg value="123"></constructor-arg>
+        <constructor-arg value="What is Java ?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="ans1"/>
+                <ref bean="ans2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
