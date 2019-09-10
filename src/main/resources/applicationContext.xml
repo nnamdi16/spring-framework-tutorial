@@ -101,4 +101,17 @@
             </map>
         </constructor-arg>
     </bean>
+    <bean id="locationBean1" class ="com.example.softwareDeveloper.Developer">
+        <constructor-arg value="101"></constructor-arg>
+        <constructor-arg value="Sachin"></constructor-arg>
+    </bean>
+    <bean id="address1" class="com.example.softwareDeveloper.Location">
+        <constructor-arg value="21, Lohianagar"></constructor-arg>
+        <constructor-arg value="Ghazlabad"></constructor-arg>
+        <constructor-arg value="UP"></constructor-arg>
+        <constructor-arg value="USA"></constructor-arg>
+    </bean>
+    <bean id="locationBean2" class="com.example.softwareDeveloper.Developer" parent="locationBean1">
+        <constructor-arg ref="address1"></constructor-arg>
+    </bean>
 </beans>

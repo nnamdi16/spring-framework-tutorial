@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.nonString.MapObject;
+import com.example.softwareDeveloper.Developer;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -21,6 +22,8 @@ public class Test {
         Chat chat = (Chat)factory.getBean("chatBean");
         MapQuestion mapQuestion = (MapQuestion)factory.getBean("MapBean");
         MapObject mapObject = (MapObject)factory.getBean("mapObject") ;
+        Developer developer = (Developer)factory.getBean("locationBean2");
+        developer.show();
         mapObject.displayInfo();
         mapQuestion.displayInfo();
         chat.displayInfo();
