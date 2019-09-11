@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="greeting" class="com.singleton.Greeting" init-method="init" destroy-method="destroy">
-        <property name="message" value="Hello All Developers"/>
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="init" default-destroy-method="destroy">
+    <bean id="greeting" class="com.singleton.Greeting">
+        <property name="message1" value="Hello All Developers"/>
+        <property name="message2" value="Hello Java Developers"/>
     </bean>
+    <bean id="helloIndia" class="com.singleton.GreetingIndia" parent="greeting" >
+        <property name="message1" value="Hello All Indians"></property>
+        <property name="message3" value="Programming in Spring Framework Nigeria"></property>
+    </bean>
+
+<!--    Bean Post Processors-->
     <bean class="com.singleton.InitHelloWorld"/>
 </beans>
 
