@@ -8,4 +8,17 @@
     <property name="city" value="Chicago"></property>
 
 </bean>
+
+<!--  Setter Injection with Dependent Object  -->
+    <bean id="residence" class="com.primitiveValue.Residence">
+        <property name="addressLine1" value="51, Lohianagar" ></property>
+        <property name="city" value="Ghana"></property>
+        <property name="country" value="India"></property>
+        <property name="state" value="Lagos State"></property>
+    </bean>
+    <bean id="worker" class="com.primitiveValue.Worker">
+        <property name="id" value="1"></property>
+        <property name="name" value="Sachin Yadav"></property>
+        <property name="residence" ref="residence" ></property>
+    </bean>
 </beans>

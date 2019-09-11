@@ -12,5 +12,9 @@ public class Data {
         BeanFactory factory = new XmlBeanFactory(resource);
         Client client = (Client) factory.getBean("obj");
         client.display();
+
+        Worker worker = (Worker)factory.getBean("worker");
+        worker.displayInfo();
+
     }
 }
