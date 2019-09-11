@@ -37,5 +37,16 @@
             </list>
         </property>
     </bean>
+    <bean id="post" class="com.SetterInjection.Post">
+        <property name="id" value="1"></property>
+        <property name="name" value="What is Python"></property>
+        <property name="post" >
+            <map>
+                <entry key="Python is a Machine Learnig programming Language" value="Sonoro"></entry>
+                <entry key="Python is a platform" value="Sachin"></entry>
+
+            </map>
+        </property>
+    </bean>
 
 </beans>

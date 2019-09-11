@@ -1,5 +1,4 @@
 package com.SetterInjection;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,5 +10,7 @@ public class MainTweet {
         tweet.displayInfo();
         Issues issues = (Issues) context.getBean("issues");
         issues.displayInfo();
+        Post post = (Post) context.getBean("post");
+        post.displayInfo();
     }
 }
