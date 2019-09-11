@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Index {
     public static void main(String[] args) {
         AbstractApplicationContext context1 = new ClassPathXmlApplicationContext("lifecycle.xml");
-        Greeting style = (Greeting) context1.getBean("message");
+        Greeting style = (Greeting) context1.getBean("greeting");
         style.getMessage();
         context1.registerShutdownHook();
     }

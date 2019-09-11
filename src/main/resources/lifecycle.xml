@@ -5,6 +5,7 @@
     <bean id="greeting" class="com.singleton.Greeting" init-method="init" destroy-method="destroy">
         <property name="message" value="Hello All Developers"/>
     </bean>
+    <bean class="com.singleton.InitHelloWorld"/>
 </beans>
 
 <!--default-init- method and default-destroy method used in beans with the same initialization and destroy method name -->
