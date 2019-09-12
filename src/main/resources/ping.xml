@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="updates1" class="com.SetterInjection.Updates">
+        <property name="id" value="1"></property>
+        <property name="updates" value="Programming is the language of the day"></property>
+        <property name="postedDate" value="12/2/2009"></property>
+    </bean>
+
+    <bean id="updates2" class="com.SetterInjection.Updates">
+        <property name="id" value="2"></property>
+        <property name="updates" value="Programming unifies the world because we say the same thing "></property>
+        <property name="postedDate" value="12/12/2010"></property>
+    </bean>
+
+    <bean id="follower1" class="com.SetterInjection.Follower">
+        <property name="id" value="1"></property>
+        <property name="name" value="James Jackson"></property>
+        <property name="email" value="james@gmail.com"></property>
+    </bean>
+    <bean id="follower2" class="com.SetterInjection.Follower">
+        <property name="id" value="2"></property>
+        <property name="name" value="Julius Caesar"></property>
+        <property name="email" value="julius@gmail.com"></property>
+    </bean>
+
+    <bean id="ping" class="com.SetterInjection.Ping">
+        <property name="id" value="1"></property>
+        <property name="name" value="What is programming to an everyday man?"></property>
+        <property name="ping">
+            <map>
+                <entry key-ref="updates1" value-ref="follower1"></entry>
+                <entry key-ref="updates2" value-ref="follower2"></entry>
+            </map>
+        </property>
+    </bean>
+</beans>
